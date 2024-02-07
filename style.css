@@ -1,0 +1,30 @@
+
+.header {
+    text-align: center;
+}
+a {
+    font-size: 80px;
+    text-align: center;
+}
+body {
+    background-image: url("https://img.freepik.com/free-vector/ai673aa1c20c08423489e975b1b26f929b_78370-2058.jpg");
+    background-size: cover;
+}
+h1 {
+    font-size: 50px;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 40px 40px 40px 40px;
+}
+button {
+    width: 37px;
+    height: 37px;
+    vertical-align: middle;
+    visibility: hidden;
+}
+label {
+    font-size: 51px;
+    text-align: center;
+}

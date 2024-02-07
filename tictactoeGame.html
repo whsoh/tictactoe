@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Tic Tac Toe Game</title>
+    </head>
+    <body>
+        <center>
+            <h1><b>Tic Tac Toe</b></h1>
+            <table>
+                <tr>
+                    <td><label id="ul"><button type="button" onclick="ul()"></button></label></td>
+                    <td><label id="ml"><button type="button" onclick="ml()"></button></label></td>
+                    <td><label id="dl"><button type="button" onclick="dl()"></button></label></td>
+                </tr>
+                <tr>
+                    <td><label id="uc"><button type="button" onclick="uc()"></button></label></td>
+                    <td><label id="mc"><button type="button" onclick="mc()"></button></label></td>
+                    <td><label id="dc"><button type="button" onclick="dc()"></button></label></td>
+                </tr>
+                <tr>
+                    <td><label id="ur"><button type="button" onclick="ur()"></button></label></td>
+                    <td><label id="mr"><button type="button" onclick="mr()"></button></label></td>
+                    <td><label id="dr"><button type="button" onclick="dr()"></button></label></td>
+                </tr>
+            </table>
+            <label id="result"></label>
+        </center>
+    </body>
+</html>
+<script>
+    //var
+    var isX = true;
+    var board = ["0","1","2","3","4","5","6","7","8"];
+    var moves = 0;
+    //sounds
+    var click = new Audio("click.wav");
+    var win = new Audio("win.wav");
+    //useful functions
+    function flip(){
+        if(isX){
+            isX = false;
+        } else {
+            isX = true;
+        }
+    }
+    function checkWin(){
+        var winCon = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+        for(let i = 0; i < winCon.length; i++){
+            if((board[winCon[i][0]] == board[winCon[i][1]]) && (board[winCon[i][0]] == board[winCon[i][2]])){
+                return true;
+            }
+        }
+    }
+    function checkDraw(){
+        return moves == 9;
+    }
+    //button functions
+    function ul(){
+        click.play();
+        moves++;
+        if(checkDraw()){location.replace("draw.html");}
+        if(isX){
+            document.getElementById("ul").innerHTML = "X";
+            board[0] = "X";
+            if(checkWin()){location.replace("Xwins.html");}
+            flip();
+        } else {
+            document.getElementById("ul").innerHTML = "O";
+            board[0] = "O";
+            if(checkWin()){location.replace("Owins.html");}
+            flip();
+        }
+    }
+    function ml(){
+        click.play();
+        moves++;
+        if(checkDraw()){location.replace("draw.html");}
+        if(isX){
+            document.getElementById("ml").innerHTML = "X";
+            board[1] = "X";
+            if(checkWin()){location.replace("Xwins.html");}
+            flip();
+        } else {
+            document.getElementById("ml").innerHTML = "O";
+            board[1] = "O";
+            if(checkWin()){location.replace("Owins.html");}
+            flip();
+        }
+    }
+    function dl(){
+        click.play();
+        moves++;
+        if(checkDraw()){location.replace("draw.html");}
+        if(isX){
+            document.getElementById("dl").innerHTML = "X";
+            board[2] = "X";
+            if(checkWin()){location.replace("Xwins.html");}
+            flip();
+        } else {
+            document.getElementById("dl").innerHTML = "O";
+            board[2] = "O";
+            if(checkWin()){location.replace("Owins.html");}
+            flip();
+        }
+    }
+    function uc(){
+        click.play();
+        moves++;
+        if(checkDraw()){location.replace("draw.html");}
+        if(isX){
+            document.getElementById("uc").innerHTML = "X";
+            board[3] = "X";
+            if(checkWin()){location.replace("Xwins.html");}
+            flip();
+        } else {
+            document.getElementById("uc").innerHTML = "O";
+            board[3] = "O";
+            if(checkWin()){location.replace("Owins.html");}
+            flip();
+        }
+    }
+    function mc(){
+        click.play();
+        moves++;
+        if(checkDraw()){location.replace("draw.html");}
+        if(isX){
+            document.getElementById("mc").innerHTML = "X";
+            board[4] = "X";
+            if(checkWin()){location.replace("Xwins.html");}
+            flip();
+        } else {
+            document.getElementById("mc").innerHTML = "O";
+            board[4] = "O";
+            if(checkWin()){location.replace("Owins.html");}
+            flip();
+        }
+    }
+    function dc(){
+        click.play();
+        moves++;
+        if(checkDraw()){location.replace("draw.html");}
+        if(isX){
+            document.getElementById("dc").innerHTML = "X";
+            board[5] = "X";
+            if(checkWin()){location.replace("Xwins.html");}
+            flip();
+        } else {
+            document.getElementById("dc").innerHTML = "O";
+            board[5] = "O";
+            if(checkWin()){location.replace("Owins.html");}
+            flip();
+        }
+    }
+    function ur(){
+        click.play();
+        moves++;
+        if(checkDraw()){location.replace("draw.html");}
+        if(isX){
+            document.getElementById("ur").innerHTML = "X";
+            board[6] = "X";
+            if(checkWin()){location.replace("Xwins.html");}
+            flip();
+        } else {
+            document.getElementById("ur").innerHTML = "O";
+            board[6] = "O";
+            if(checkWin()){location.replace("Owins.html");}
+            flip();
+        }
+    }
+    function mr(){
+        click.play();
+        moves++;
+        if(checkDraw()){location.replace("draw.html");}
+        if(isX){
+            document.getElementById("mr").innerHTML = "X";
+            board[7] = "X";
+            if(checkWin()){location.replace("Xwins.html");}
+            flip();
+        } else {
+            document.getElementById("mr").innerHTML = "O";
+            board[7] = "O";
+            if(checkWin()){location.replace("Owins.html");}
+            flip();
+        }
+    }
+    function dr(){
+        click.play();
+        moves++;
+        if(checkDraw()){location.replace("draw.html");}
+        if(isX){
+            document.getElementById("dr").innerHTML = "X";
+            board[8] = "X";
+            if(checkWin()){location.replace("Xwins.html");}
+            flip();
+        } else {
+            document.getElementById("dr").innerHTML = "O";
+            board[8] = "O";
+            if(checkWin()){location.replace("Owins.html");}
+            flip();
+        }
+    }
+</script>

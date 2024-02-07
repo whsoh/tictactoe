@@ -1,0 +1,18 @@
+body {
+    background-image: url("https://img.freepik.com/free-vector/ai673aa1c20c08423489e975b1b26f929b_78370-2058.jpg");
+    background-size: cover;
+}
+button{
+    background-image: url("https://img.freepik.com/free-vector/ai673aa1c20c08423489e975b1b26f929b_78370-2058.jpg");
+    background-size: cover;
+    width: 300px;
+    height: 50px;
+    text-align: center;
+}
+h1{
+    font-family: jula;
+    font-size: 200px;
+}
+p{
+    font-size: 100px;
+}
