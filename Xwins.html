@@ -6,6 +6,24 @@
     </head>
     <body>
         <center>
+            <table>
+                <tr>
+                    <td><label id="ul"></label></td>
+                    <td><label id="ml"></label></td>
+                    <td><label id="dl"></label></td>
+                </tr>
+                <tr>
+                    <td><label id="uc"></label></td>
+                    <td><label id="mc"></label></td>
+                    <td><label id="dc"></label></td>
+                </tr>
+                <tr>
+                    <td><label id="ur"></label></td>
+                    <td><label id="mr"></label></td>
+                    <td><label id="dr"></label></td>
+                </tr>
+            </table>
+
             <h1><b>X wins!</b></h1>
             <h2>Player 1 wins!</h2>
 
@@ -17,4 +35,13 @@
     function back(){
         location.replace("tictactoeGame.html");
     }
+    document.getElementById("ul").innerHTML = sessionStorage.getItem("ul");
+    document.getElementById("ml").innerHTML = sessionStorage.getItem("ml");
+    document.getElementById("dl").innerHTML = sessionStorage.getItem("dl");
+    document.getElementById("uc").innerHTML = sessionStorage.getItem("uc");
+    document.getElementById("mc").innerHTML = sessionStorage.getItem("mc");
+    document.getElementById("dc").innerHTML = sessionStorage.getItem("dc");
+    document.getElementById("ur").innerHTML = sessionStorage.getItem("ur");
+    document.getElementById("mr").innerHTML = sessionStorage.getItem("mr");
+    document.getElementById("dr").innerHTML = sessionStorage.getItem("dr");
 </script>
